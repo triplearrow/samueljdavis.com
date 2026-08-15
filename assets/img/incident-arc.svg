@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="t8 d8" width="720" height="260">
+  <title id="t8">The arc of a bad day</title>
+  <desc id="d8">An incident timeline from first signal through containment and eradication to recovery and the lessons-learned review.</desc>
+
+  <rect width="720" height="260" rx="12" fill="#1A1917"/>
+
+  <!-- baseline -->
+  <path d="M40 168h640" stroke="#3E3A34"/>
+
+  <!-- severity curve -->
+  <path d="M40 160 L140 152 C190 148 200 66 250 60 C300 54 320 74 360 92 C410 114 470 140 540 152 C600 162 640 164 680 166"
+        fill="none" stroke="#E2600F" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M40 160 L140 152 C190 148 200 66 250 60 C300 54 320 74 360 92 C410 114 470 140 540 152 C600 162 640 164 680 166 L680 168 L40 168 Z"
+        fill="#E2600F" fill-opacity=".10"/>
+
+  <!-- phase markers -->
+  <g stroke="#4A463F" stroke-dasharray="3 5">
+    <path d="M140 60v108M250 46v122M360 78v90M540 138v30"/>
+  </g>
+  <g fill="#E2600F">
+    <circle cx="140" cy="152" r="4.5"/><circle cx="250" cy="60" r="5.5"/>
+    <circle cx="360" cy="92" r="4.5"/><circle cx="540" cy="152" r="4.5"/>
+  </g>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#B4ADA2" text-anchor="middle">
+    <text x="140" y="196">DETECT</text>
+    <text x="250" y="196">TRIAGE</text>
+    <text x="360" y="196">CONTAIN</text>
+    <text x="540" y="196">RECOVER</text>
+    <text x="668" y="196" fill="#7E776D">REVIEW</text>
+  </g>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#7E776D" text-anchor="middle">
+    <text x="140" y="214">a signal, not a siren</text>
+    <text x="250" y="214">what is true?</text>
+    <text x="360" y="214">stop the bleeding</text>
+    <text x="540" y="214">prove it is clean</text>
+    <text x="668" y="214">no blame, just fixes</text>
+  </g>
+
+  <text x="40" y="40" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13"
+        fill="#F5F2ED" font-weight="600">The arc of a bad day</text>
+  <text x="680" y="40" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace"
+        font-size="11" fill="#E2600F">rehearsed &gt; improvised</text>
+</svg>

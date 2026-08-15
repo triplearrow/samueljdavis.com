@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 286" role="img" aria-labelledby="t3 d3" width="560" height="286">
+  <title id="t3">Jargon to plain language</title>
+  <desc id="d3">Security jargon on the left passes through a translation layer and comes out as plain-English decisions on the right.</desc>
+
+  <!-- left: jargon stack -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12">
+    <rect x="8" y="40" width="186" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="24" y="62" fill="#6F685F">lateral movement</text>
+    <rect x="8" y="88" width="186" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="24" y="110" fill="#6F685F">privilege escalation</text>
+    <rect x="8" y="136" width="186" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="24" y="158" fill="#6F685F">residual risk</text>
+    <rect x="8" y="184" width="186" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="24" y="206" fill="#6F685F">control gap</text>
+    <rect x="8" y="232" width="186" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="24" y="254" fill="#6F685F">MFA bypass</text>
+  </g>
+  <text x="8" y="26" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12"
+        fill="#9A938A" letter-spacing="2">WHAT WE SAY</text>
+
+  <!-- connectors in -->
+  <g stroke="#CFC9C0" fill="none">
+    <path d="M194 57h44l18 40M194 105h44l12 20M194 153h56M194 201h44l12-20M194 249h44l18-40"/>
+  </g>
+
+  <!-- translator prism -->
+  <g transform="translate(250 105)">
+    <path d="M30 0 60 48 30 96 0 48z" fill="#1A1917"/>
+    <path d="M30 0 60 48 30 96 0 48z" fill="none" stroke="#E2600F" stroke-width="2"/>
+    <text x="30" y="53" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+          font-size="20" fill="#E2600F">↦</text>
+  </g>
+  <text x="280" y="228" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+        font-size="11" fill="#9A938A" letter-spacing="1.4">TRANSLATE</text>
+
+  <!-- connectors out -->
+  <g stroke="#E2600F" fill="none" stroke-opacity=".55">
+    <path d="M310 153h20l14-56h20M310 153h54M310 153h20l14 56h20"/>
+  </g>
+
+  <!-- right: plain outcomes -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13">
+    <rect x="364" y="76" width="188" height="42" rx="6" fill="#FFF2E8" stroke="#F0C9A6"/>
+    <text x="380" y="94" fill="#33302C">“One stolen laptop</text>
+    <text x="380" y="110" fill="#33302C">reaches everything.”</text>
+
+    <rect x="364" y="132" width="188" height="42" rx="6" fill="#FFF2E8" stroke="#F0C9A6"/>
+    <text x="380" y="150" fill="#33302C">“We can accept this</text>
+    <text x="380" y="166" fill="#33302C">for two quarters.”</text>
+
+    <rect x="364" y="188" width="188" height="42" rx="6" fill="#FFF2E8" stroke="#F0C9A6"/>
+    <text x="380" y="206" fill="#33302C">“Fund this one, not</text>
+    <text x="380" y="222" fill="#33302C">those three.”</text>
+  </g>
+  <text x="552" y="26" text-anchor="end" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="12" fill="#9A938A" letter-spacing="2">WHAT THEY DECIDE</text>
+</svg>

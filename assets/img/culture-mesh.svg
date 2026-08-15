@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" role="img" aria-labelledby="t10 d10" width="680" height="300">
+  <title id="t10">Security culture mesh</title>
+  <desc id="d10">People across a company connected as a network, where reporting a mistake early spreads protection outward.</desc>
+
+  <rect width="680" height="300" rx="12" fill="#1A1917"/>
+
+  <!-- connections -->
+  <g stroke="#3E3A34" fill="none">
+    <path d="M96 96 200 60 320 108 440 66 560 104M96 96 168 190 300 214 420 178 560 104
+             M200 60 300 214M320 108 168 190M440 66 420 178M96 96 320 108M320 108 560 104
+             M168 190 96 96M420 178 560 104M200 60 320 108"/>
+  </g>
+
+  <!-- signal spreading from the reporter -->
+  <g stroke="#E2600F" stroke-width="2" fill="none" stroke-linecap="round">
+    <path d="M320 108 200 60M320 108 168 190M320 108 440 66M320 108 420 178"/>
+  </g>
+  <g fill="none" stroke="#E2600F" stroke-opacity=".3">
+    <circle cx="320" cy="108" r="34"/><circle cx="320" cy="108" r="52"/><circle cx="320" cy="108" r="70"/>
+  </g>
+
+  <!-- people nodes -->
+  <g>
+    <g fill="#4A463F">
+      <circle cx="96" cy="96" r="13"/><circle cx="200" cy="60" r="13"/><circle cx="440" cy="66" r="13"/>
+      <circle cx="560" cy="104" r="13"/><circle cx="168" cy="190" r="13"/><circle cx="420" cy="178" r="13"/>
+    </g>
+    <circle cx="320" cy="108" r="18" fill="#E2600F"/>
+    <path d="M320 100a5 5 0 1 1 0 10 5 5 0 0 1 0-10M310 122c0-6 4-9 10-9s10 3 10 9z" fill="#1A1917"/>
+  </g>
+
+  <!-- caption -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#B4ADA2">
+    <text x="320" y="212" text-anchor="middle" fill="#E2600F">“I think I clicked something.”</text>
+  </g>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#F5F2ED">
+    <text x="320" y="248" text-anchor="middle">The most valuable sentence in security — and people only say it</text>
+    <text x="320" y="268" text-anchor="middle" fill="#B4ADA2">when they are certain they will not be punished for it.</text>
+  </g>
+</svg>

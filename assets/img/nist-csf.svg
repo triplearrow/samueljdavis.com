@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t4 d4" width="400" height="400">
+  <title id="t4">NIST Cybersecurity Framework wheel</title>
+  <desc id="d4">Five operating functions — Identify, Protect, Detect, Respond, Recover — arranged around a Govern core.</desc>
+
+  <g transform="translate(200 200)">
+    <!-- five segments of an annulus, r 78 -> 150 -->
+    <g stroke="#FFFFFF" stroke-width="3">
+      <path d="M0 -150A150 150 0 0 1 142.7 -46.4L74.2 -24.1A78 78 0 0 0 0 -78Z" fill="#33302C"/>
+      <path d="M142.7 -46.4A150 150 0 0 1 88.2 121.4L45.9 63.1A78 78 0 0 0 74.2 -24.1Z" fill="#4A463F"/>
+      <path d="M88.2 121.4A150 150 0 0 1 -88.2 121.4L-45.9 63.1A78 78 0 0 0 45.9 63.1Z" fill="#E2600F"/>
+      <path d="M-88.2 121.4A150 150 0 0 1 -142.7 -46.4L-74.2 -24.1A78 78 0 0 0 -45.9 63.1Z" fill="#6B655C"/>
+      <path d="M-142.7 -46.4A150 150 0 0 1 0 -150L0 -78A78 78 0 0 0 -74.2 -24.1Z" fill="#8C857B"/>
+    </g>
+
+    <!-- govern core -->
+    <circle r="66" fill="#1A1917"/>
+    <circle r="66" fill="none" stroke="#E2600F" stroke-width="1.5"/>
+    <text y="0" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="19" font-weight="700" fill="#F5F2ED" letter-spacing="1">GOVERN</text>
+    <text y="22" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+          font-size="10" fill="#E2600F" letter-spacing="1.2">start here</text>
+
+    <!-- segment labels -->
+    <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" font-weight="600"
+       fill="#FFFFFF" text-anchor="middle" letter-spacing=".4">
+      <text x="68" y="-88">IDENTIFY</text>
+      <text x="112" y="32">PROTECT</text>
+      <text x="0" y="118">DETECT</text>
+      <text x="-112" y="32">RESPOND</text>
+      <text x="-68" y="-88">RECOVER</text>
+    </g>
+  </g>
+</svg>
