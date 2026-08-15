@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 300" role="img" aria-labelledby="t6 d6" width="540" height="300">
+  <title id="t6">Zero trust access decision</title>
+  <desc id="d6">Every request is evaluated against identity, device, and context before a session is granted, and re-checked continuously.</desc>
+
+  <!-- request -->
+  <g transform="translate(8 118)">
+    <rect width="104" height="64" rx="8" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="52" y="30" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="13" font-weight="600" fill="#33302C">Request</text>
+    <text x="52" y="48" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+          font-size="10" fill="#7A736A">from anywhere</text>
+  </g>
+
+  <!-- signals -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#6F685F">
+    <rect x="148" y="34" width="112" height="34" rx="6" fill="#FFFFFF" stroke="#DCD6CD"/>
+    <text x="204" y="55" text-anchor="middle">identity + MFA</text>
+    <rect x="148" y="82" width="112" height="34" rx="6" fill="#FFFFFF" stroke="#DCD6CD"/>
+    <text x="204" y="103" text-anchor="middle">device health</text>
+    <rect x="148" y="130" width="112" height="34" rx="6" fill="#FFFFFF" stroke="#DCD6CD"/>
+    <text x="204" y="151" text-anchor="middle">privilege level</text>
+    <rect x="148" y="178" width="112" height="34" rx="6" fill="#FFFFFF" stroke="#DCD6CD"/>
+    <text x="204" y="199" text-anchor="middle">location + time</text>
+    <rect x="148" y="226" width="112" height="34" rx="6" fill="#FFFFFF" stroke="#DCD6CD"/>
+    <text x="204" y="247" text-anchor="middle">data sensitivity</text>
+  </g>
+
+  <g stroke="#CFC9C0" fill="none">
+    <path d="M112 150h18V51h18M112 150h18V99h18M130 150h18M112 150h18v48h18M112 150h18v96h18"/>
+  </g>
+
+  <!-- policy engine -->
+  <g stroke="#CFC9C0" fill="none"><path d="M260 51h22v88M260 99h14v40M260 150h30M260 198h14v-40M260 246h22v-88"/></g>
+  <g transform="translate(296 106)">
+    <rect width="92" height="88" rx="8" fill="#1A1917"/>
+    <rect width="92" height="88" rx="8" fill="none" stroke="#E2600F"/>
+    <text x="46" y="34" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="700" fill="#F5F2ED">POLICY</text>
+    <text x="46" y="50" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+          font-size="12" font-weight="700" fill="#F5F2ED">ENGINE</text>
+    <text x="46" y="70" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+          font-size="10" fill="#E2600F">per request</text>
+  </g>
+
+  <!-- outcomes -->
+  <g stroke="#E2600F" fill="none"><path d="M388 150h20v-40h16M388 150h20v40h16"/></g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10">
+    <rect x="424" y="92" width="104" height="34" rx="6" fill="#FFF2E8" stroke="#F0C9A6"/>
+    <text x="476" y="113" text-anchor="middle" fill="#E2600F">grant · scoped</text>
+    <rect x="424" y="174" width="104" height="34" rx="6" fill="#F2EFEA" stroke="#DCD6CD"/>
+    <text x="476" y="195" text-anchor="middle" fill="#6F685F">step up / deny</text>
+  </g>
+
+  <!-- continuous re-evaluation loop -->
+  <path d="M476 126v20c0 0 0 8-8 8H352c-8 0-8 8-8 8v22" fill="none" stroke="#E2600F"
+        stroke-dasharray="5 5" stroke-opacity=".6"/>
+  <text x="344" y="292" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+        font-size="10" fill="#9A938A">re-evaluated, not remembered</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" role="img" aria-labelledby="t9 d9" width="640" height="340">
+  <title id="t9">The Resilience Blueprint roadmap</title>
+  <desc id="d9">A multi-year cybersecurity roadmap showing foundation, identity, resilience, and assurance workstreams staged across three years.</desc>
+
+  <!-- blueprint grid -->
+  <g stroke="#EFEBE4">
+    <path d="M0 80H640M0 136H640M0 192H640M0 248H640"/>
+    <path d="M120 40V276M200 40V276M280 40V276M360 40V276M440 40V276M520 40V276M600 40V276"/>
+  </g>
+
+  <!-- year headers -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#9A938A"
+     letter-spacing="1.4" text-anchor="middle">
+    <text x="200" y="26">YEAR 1</text><text x="360" y="26">YEAR 2</text><text x="520" y="26">YEAR 3</text>
+  </g>
+  <path d="M0 36h640" stroke="#DCD6CD"/>
+
+  <!-- lane labels -->
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="12" fill="#33302C">
+    <text x="8" y="70">Foundation</text>
+    <text x="8" y="126">Identity</text>
+    <text x="8" y="182">Resilience</text>
+    <text x="8" y="238">Assurance</text>
+  </g>
+
+  <!-- workstream bars -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5">
+    <rect x="120" y="54" width="220" height="22" rx="5" fill="#E2600F"/>
+    <text x="132" y="69" fill="#FFFFFF">governance · policy · CSF baseline</text>
+
+    <rect x="180" y="110" width="220" height="22" rx="5" fill="#33302C"/>
+    <text x="192" y="125" fill="#F5F2ED">MFA · SSO · privileged access</text>
+
+    <rect x="280" y="166" width="240" height="22" rx="5" fill="#6B655C"/>
+    <text x="292" y="181" fill="#FFFFFF">IR playbooks · DR · tested backups</text>
+
+    <rect x="360" y="222" width="240" height="22" rx="5" fill="#8C857B"/>
+    <text x="372" y="237" fill="#FFFFFF">vendor risk · PCI · monitoring maturity</text>
+  </g>
+
+  <!-- today marker -->
+  <path d="M400 36v240" stroke="#E2600F" stroke-dasharray="4 4"/>
+  <g transform="translate(370 278)">
+    <rect width="60" height="20" rx="4" fill="#E2600F"/>
+    <text x="30" y="14" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace"
+          font-size="10" fill="#FFFFFF">TODAY</text>
+  </g>
+
+  <text x="8" y="330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="11.5" fill="#9A938A">“Resilience Blueprint” — a roadmap written to be read by people who don’t work in security.</text>
+</svg>
