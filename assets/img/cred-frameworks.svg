@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-labelledby="cf-t cf-d" width="56" height="56">
+  <title id="cf-t">Frameworks</title>
+  <desc id="cf-d">A lattice of connected nodes with one highlighted at the centre.</desc>
+
+  <g stroke="#33302C" stroke-width="1.6" stroke-linecap="round" opacity=".55">
+    <path d="M14 14h28M14 28h28M14 42h28M14 14v28M28 14v28M42 14v28"/>
+  </g>
+  <g stroke="#33302C" stroke-width="1.6" stroke-linecap="round" opacity=".35">
+    <path d="M14 14 42 42M42 14 14 42"/>
+  </g>
+
+  <g fill="#FFFFFF" stroke="#33302C" stroke-width="2">
+    <circle cx="14" cy="14" r="3.4"/>
+    <circle cx="42" cy="14" r="3.4"/>
+    <circle cx="14" cy="42" r="3.4"/>
+    <circle cx="42" cy="42" r="3.4"/>
+  </g>
+  <circle cx="28" cy="28" r="5.2" fill="#E2600F"/>
+</svg>
