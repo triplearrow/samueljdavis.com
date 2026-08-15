@@ -9,12 +9,12 @@
    ============================================================ */
 
 :root{
-  --glass:       rgba(255,255,255,.78);
-  --glass-2:     rgba(255,255,255,.62);
+  --glass:       rgba(255,255,255,.72);
+  --glass-2:     rgba(255,255,255,.56);
   --glass-line:  rgba(255,255,255,.85);
-  --wash-warm:   rgba(226,96,15,.10);
-  --wash-cool:   rgba(51,48,44,.07);
-  --grain:       .034;
+  --wash-warm:   rgba(226,96,15,.16);
+  --wash-cool:   rgba(51,48,44,.11);
+  --grain:       .045;
 }
 
 /* ---- the page itself becomes the canvas -------------------
@@ -28,7 +28,7 @@ body::before{
   content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
   background:
     radial-gradient(62rem 42rem at 80% -10%, var(--wash-warm), transparent 62%),
-    radial-gradient(50rem 36rem at 2% 14%,  rgba(226,96,15,.055), transparent 60%),
+    radial-gradient(50rem 36rem at 2% 14%,  rgba(226,96,15,.085), transparent 60%),
     radial-gradient(72rem 48rem at 50% 106%, var(--wash-cool), transparent 64%);
 }
 
@@ -53,8 +53,8 @@ body::after{
 .band--dark::before{
   content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
   background:
-    radial-gradient(46rem 30rem at 84% 6%, rgba(226,96,15,.16), transparent 60%),
-    radial-gradient(38rem 26rem at 6% 96%, rgba(226,96,15,.07), transparent 62%);
+    radial-gradient(46rem 30rem at 84% 6%, rgba(226,96,15,.21), transparent 60%),
+    radial-gradient(38rem 26rem at 6% 96%, rgba(226,96,15,.10), transparent 62%);
 }
 
 /* ---- glass surfaces ---------------------------------------
@@ -76,7 +76,7 @@ body::after{
     inset 0 1px 0 var(--glass-line);
 }
 .card:hover{
-  background:rgba(255,255,255,.86);
+  background:rgba(255,255,255,.80);
   box-shadow:
     0 1px 2px rgba(26,25,23,.05),
     0 24px 48px -24px rgba(26,25,23,.42),
@@ -96,8 +96,8 @@ body::after{
 .hero__art::before{
   content:""; position:absolute; inset:-14% -10% -8%; z-index:0;
   pointer-events:none;
-  background:radial-gradient(closest-side, rgba(226,96,15,.18), transparent 72%);
-  filter:blur(30px);
+  background:radial-gradient(closest-side, rgba(226,96,15,.26), transparent 71%);
+  filter:blur(33px);
 }
 .hero__lattice,
 .hero__plate{ position:relative; z-index:1; }
