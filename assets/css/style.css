@@ -76,6 +76,10 @@ p{ margin:0 0 1.1em; }
 .dot{ width:7px; height:7px; border-radius:50%; background:var(--orange); flex:none; }
 
 .sec-head{ max-width:64ch; margin-bottom:44px; }
+/* lets a short heading + one-line standfirst use the full column
+   instead of breaking against the 64ch measure */
+.sec-head--wide{ max-width:none; }
+.sec-head--wide .sec-sub{ max-width:88ch; }
 .sec-head--center{ margin-inline:auto; text-align:center; }
 .sec-head--center .eyebrow{ justify-content:center; }
 .sec-sub{ color:var(--grey); font-size:1.05rem; margin:0; }

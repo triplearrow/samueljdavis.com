@@ -80,7 +80,7 @@ real explanations of Sam's work, not decoration:
 | `pci-scope.svg` | PCI scope cut roughly in half |
 | `zero-trust.svg` | Signals feeding a per-request policy decision |
 | `vendor-risk.svg` | 20+ vendors a year through triage, review, and a procurement gate |
-| `incident-arc.svg` | Severity curve across detect → triage → contain → recover → review |
+| `incident-arc.svg` | Severity curve across the four NIST SP 800-61 phases |
 | `resilience-blueprint.svg` | The multi-year roadmap, as lanes across three years |
 | `culture-mesh.svg` | One person reporting a mistake protects everyone connected |
 
