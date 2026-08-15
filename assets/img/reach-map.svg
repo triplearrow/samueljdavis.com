@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-labelledby="rm-t rm-d" width="400" height="240">
+  <title id="rm-t">Where I work from</title>
+  <desc id="rm-d">Concentric rings centred on Pataskala, Ohio: the Columbus metro on site, the wider region for regular travel, and remote work anywhere beyond it.</desc>
+
+  <g transform="translate(150 120)">
+    <!-- outer: remote, anywhere -->
+    <circle r="112" fill="none" stroke="#C9C2B8" stroke-width="1.2" stroke-dasharray="3 6"/>
+    <!-- middle: regional travel -->
+    <circle r="74" fill="none" stroke="#B4ADA2" stroke-width="1.2" stroke-dasharray="6 5"/>
+    <!-- inner: metro, on site -->
+    <circle r="40" fill="#E2600F" fill-opacity=".07" stroke="#E2600F" stroke-width="1.4"/>
+
+    <!-- faint bearings -->
+    <g stroke="#C9C2B8" stroke-width=".9" opacity=".7">
+      <path d="M0 -112V112M-112 0H112"/>
+    </g>
+
+    <!-- home -->
+    <circle r="5.6" fill="#E2600F"/>
+    <circle r="11" fill="none" stroke="#E2600F" stroke-width="1.4" opacity=".55"/>
+  </g>
+
+  <!-- leaders and labels -->
+  <g stroke="#9A938A" stroke-width="1">
+    <path d="M156 120h108M190 82h74M224 46h40" fill="none"/>
+  </g>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.1" fill="#6B655C">
+    <text x="270" y="124" fill="#1A1917">PATASKALA, OH</text>
+    <text x="270" y="86">COLUMBUS METRO · ON SITE</text>
+    <text x="270" y="50">REGION · REGULAR TRAVEL</text>
+  </g>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.1">
+    <text x="150" y="228" text-anchor="middle" fill="#9A938A">EVERYTHING ELSE · REMOTE</text>
+  </g>
+</svg>

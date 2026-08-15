@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-labelledby="cm-t cm-d" width="56" height="56">
+  <title id="cm-t">Sergeant</title>
+  <desc id="cm-d">Three stacked chevrons, the rank insignia of a sergeant.</desc>
+
+  <g fill="none" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 24 28 12l17 12" stroke="#E2600F"/>
+    <path d="M11 34 28 22l17 12" stroke="#33302C"/>
+    <path d="M11 44 28 32l17 12" stroke="#33302C"/>
+  </g>
+</svg>

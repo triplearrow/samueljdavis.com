@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56" role="img" aria-labelledby="ce-t ce-d" width="56" height="56">
+  <title id="ce-t">Degree</title>
+  <desc id="ce-d">A graduation cap with a tassel.</desc>
+
+  <g fill="none" stroke="#33302C" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M28 13 50 22 28 31 6 22z"/>
+    <path d="M15 26.6V37c3.4 3.6 8 5.4 13 5.4S37.6 40.6 41 37V26.6"/>
+  </g>
+
+  <g stroke="#E2600F" stroke-width="2.2" stroke-linecap="round" fill="none">
+    <path d="M50 22v11.5"/>
+  </g>
+  <circle cx="50" cy="36.5" r="2.7" fill="#E2600F"/>
+</svg>

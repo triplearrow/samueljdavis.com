@@ -244,6 +244,7 @@ p{ margin:0 0 1.1em; }
 
 /* ---------- creds ---------- */
 .creds{ display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
+.creds__mark{ width:38px; height:38px; margin:0 0 15px; }
 .creds__col h3{
   font:600 11.5px/1 var(--sans); letter-spacing:.16em; text-transform:uppercase;
   color:var(--grey-soft); margin-bottom:14px; padding-bottom:14px; border-bottom:1px solid var(--line);
@@ -255,6 +256,8 @@ p{ margin:0 0 1.1em; }
 .contact{ display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:clamp(36px,5vw,72px); align-items:start; }
 .contact__copy{ max-width:52ch; }
 .contact__copy .fineprint{ margin-top:26px; }
+.reach{ margin:34px 0 0; max-width:400px; }
+.reach img{ width:100%; }
 .contact__links{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
 .clink{
   display:flex; flex-direction:column; gap:5px; text-decoration:none;
