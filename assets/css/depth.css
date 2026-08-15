@@ -1,0 +1,157 @@
+/* ============================================================
+   samueljdavis.com — depth layer
+   Loads after style.css. Adds atmosphere without touching the
+   palette: an ambient wash, a grain overlay, and translucent
+   surfaces so the wash reads through the content.
+
+   Everything here is additive. Remove the <link> in index.html
+   and the site returns to flat exactly as before.
+   ============================================================ */
+
+:root{
+  --glass:       rgba(255,255,255,.78);
+  --glass-2:     rgba(255,255,255,.62);
+  --glass-line:  rgba(255,255,255,.85);
+  --wash-warm:   rgba(226,96,15,.10);
+  --wash-cool:   rgba(51,48,44,.07);
+  --grain:       .034;
+}
+
+/* ---- the page itself becomes the canvas -------------------
+   style.css paints --paper on <body>. Move it to <html> so the
+   ambient layers below can sit behind the content.           */
+html{ background:var(--paper); }
+body{ background:transparent; }
+
+/* ---- ambient wash ---------------------------------------- */
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(62rem 42rem at 80% -10%, var(--wash-warm), transparent 62%),
+    radial-gradient(50rem 36rem at 2% 14%,  rgba(226,96,15,.055), transparent 60%),
+    radial-gradient(72rem 48rem at 50% 106%, var(--wash-cool), transparent 64%);
+}
+
+/* ---- grain -------------------------------------------------
+   Stops the gradients banding on wide displays and gives the
+   white a little tooth. Pure CSS — no image request.          */
+body::after{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  opacity:var(--grain);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ---- bands let the wash through --------------------------- */
+.band--tint{
+  background:linear-gradient(180deg, rgba(247,245,242,.82), rgba(242,239,234,.66));
+  border-block-color:rgba(227,222,214,.7);
+}
+
+/* Dark bands stay solid — they are the page's hard contrast
+   beat — but gain an interior glow so they read as lit, not flat. */
+.band--dark{ position:relative; isolation:isolate; overflow:hidden; }
+.band--dark::before{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(46rem 30rem at 84% 6%, rgba(226,96,15,.16), transparent 60%),
+    radial-gradient(38rem 26rem at 6% 96%, rgba(226,96,15,.07), transparent 62%);
+}
+
+/* ---- glass surfaces ---------------------------------------
+   The "transparent background" — content sits on frosted panes
+   so the ambient wash and grain show through.                 */
+.card,
+.clink,
+.figure-wide--bordered{
+  background:var(--glass);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  backdrop-filter:blur(16px) saturate(150%);
+  border-color:rgba(227,222,214,.85);
+}
+
+.card{
+  box-shadow:
+    0 1px 2px rgba(26,25,23,.05),
+    0 12px 32px -18px rgba(26,25,23,.30),
+    inset 0 1px 0 var(--glass-line);
+}
+.card:hover{
+  background:rgba(255,255,255,.86);
+  box-shadow:
+    0 1px 2px rgba(26,25,23,.05),
+    0 24px 48px -24px rgba(26,25,23,.42),
+    inset 0 1px 0 var(--glass-line);
+}
+
+/* Inner figure plates go translucent too, or they punch a flat
+   hole through the frosted card. */
+.card figure{
+  background:linear-gradient(160deg, rgba(247,245,242,.75), rgba(242,239,234,.5));
+  border-color:rgba(227,222,214,.8);
+}
+
+.clink--static{ background:var(--glass-2); }
+
+/* ---- hero: light behind the lattice ------------------------ */
+.hero__art::before{
+  content:""; position:absolute; inset:-14% -10% -8%; z-index:0;
+  pointer-events:none;
+  background:radial-gradient(closest-side, rgba(226,96,15,.18), transparent 72%);
+  filter:blur(30px);
+}
+.hero__lattice,
+.hero__plate{ position:relative; z-index:1; }
+
+/* ---- terminal: give the glow some throw ------------------- */
+.term{
+  box-shadow:
+    0 40px 80px -40px rgba(0,0,0,.9),
+    0 0 0 1px rgba(226,96,15,.14),
+    0 0 90px -26px rgba(226,96,15,.30);
+}
+
+/* ---- hairlines fade at the edges --------------------------
+   A rule that dies out before the margin reads softer than one
+   that runs edge to edge. */
+.sec-head + *,
+.stats{ position:relative; }
+.stats{
+  border-top:0;
+  background-image:linear-gradient(90deg, transparent, var(--line) 12%, var(--line) 88%, transparent);
+  background-size:100% 1px;
+  background-repeat:no-repeat;
+  background-position:0 0;
+}
+
+/* ---- timeline nodes get a halo ---------------------------- */
+.timeline > li::before{
+  box-shadow:0 0 0 5px rgba(226,96,15,.10);
+}
+
+/* ---- respect the user ------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  .card{ transition:none; }
+}
+
+/* Backdrop-filter is well supported, but if it is missing the
+   panes would sit near-transparent over the wash and lose
+   contrast. Fall back to something closer to solid. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .card,
+  .clink,
+  .figure-wide--bordered{ background:rgba(255,255,255,.94); }
+  .clink--static{ background:rgba(247,245,242,.94); }
+}
+
+/* ---- narrow screens ---------------------------------------
+   Large blur regions are the expensive part on phones, and the
+   hero glow sits behind a much smaller figure there. */
+@media (max-width:720px){
+  .hero__art::before{ inset:-8% -6% -4%; filter:blur(20px); }
+  .card,
+  .clink,
+  .figure-wide--bordered{
+    -webkit-backdrop-filter:blur(10px) saturate(130%);
+    backdrop-filter:blur(10px) saturate(130%);
+  }
+}
