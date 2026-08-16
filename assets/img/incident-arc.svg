@@ -1,44 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" role="img" aria-labelledby="t8 d8" width="720" height="260">
-  <title id="t8">The arc of a bad day</title>
-  <desc id="d8">An incident timeline from first signal through containment and eradication to recovery and the lessons-learned review.</desc>
+  <title id="t8">The arc of a bad day, mapped to NIST SP 800-61</title>
+  <desc id="d8">A severity curve across the four phases of the NIST SP 800-61 incident response life cycle: preparation while it is quiet, detection and analysis as severity climbs to its peak, containment, eradication and recovery as it falls, and post-incident activity once it is over.</desc>
 
   <rect width="720" height="260" rx="12" fill="#1A1917"/>
 
   <!-- baseline -->
-  <path d="M40 168h640" stroke="#3E3A34"/>
+  <path d="M40 172h640" stroke="#3E3A34"/>
 
-  <!-- severity curve -->
-  <path d="M40 160 L140 152 C190 148 200 66 250 60 C300 54 320 74 360 92 C410 114 470 140 540 152 C600 162 640 164 680 166"
+  <!-- severity curve: flat through preparation, climbing through
+       detection and analysis, falling across containment through
+       recovery, flat again for post-incident activity -->
+  <path id="arc" d="M40 162 L150 158 C190 155 215 62 265 58 C320 54 360 96 420 118 C480 138 520 148 560 154 C600 159 640 161 680 163"
         fill="none" stroke="#E2600F" stroke-width="2.5" stroke-linecap="round"/>
-  <path d="M40 160 L140 152 C190 148 200 66 250 60 C300 54 320 74 360 92 C410 114 470 140 540 152 C600 162 640 164 680 166 L680 168 L40 168 Z"
+  <path d="M40 162 L150 158 C190 155 215 62 265 58 C320 54 360 96 420 118 C480 138 520 148 560 154 C600 159 640 161 680 163 L680 172 L40 172 Z"
         fill="#E2600F" fill-opacity=".10"/>
 
-  <!-- phase markers -->
+  <!-- phase boundaries -->
   <g stroke="#4A463F" stroke-dasharray="3 5">
-    <path d="M140 60v108M250 46v122M360 78v90M540 138v30"/>
+    <path d="M150 158v14M265 58v114M560 154v18"/>
   </g>
   <g fill="#E2600F">
-    <circle cx="140" cy="152" r="4.5"/><circle cx="250" cy="60" r="5.5"/>
-    <circle cx="360" cy="92" r="4.5"/><circle cx="540" cy="152" r="4.5"/>
+    <circle cx="150" cy="158" r="4.5"/>
+    <circle cx="265" cy="58" r="5.5"/>
+    <circle cx="560" cy="154" r="4.5"/>
   </g>
 
-  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#B4ADA2" text-anchor="middle">
-    <text x="140" y="196">DETECT</text>
-    <text x="250" y="196">TRIAGE</text>
-    <text x="360" y="196">CONTAIN</text>
-    <text x="540" y="196">RECOVER</text>
-    <text x="668" y="196" fill="#7E776D">REVIEW</text>
+  <!-- phase bar -->
+  <g fill="#E2600F">
+    <rect x="40"  y="182" width="104" height="5" rx="2.5" fill-opacity=".5"/>
+    <rect x="150" y="182" width="109" height="5" rx="2.5"/>
+    <rect x="265" y="182" width="289" height="5" rx="2.5"/>
+    <rect x="560" y="182" width="120" height="5" rx="2.5" fill-opacity=".5"/>
   </g>
+
+  <!-- phase names -->
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#B4ADA2" text-anchor="middle" letter-spacing=".3">
+    <text x="92"  y="204">PREPARATION</text>
+    <text x="204" y="204">DETECTION</text>
+    <text x="204" y="217">&amp; ANALYSIS</text>
+    <text x="409" y="204">CONTAINMENT, ERADICATION</text>
+    <text x="409" y="217">&amp; RECOVERY</text>
+    <text x="620" y="204" fill="#7E776D">POST-INCIDENT</text>
+    <text x="620" y="217" fill="#7E776D">ACTIVITY</text>
+  </g>
+
+  <!-- what each phase actually is -->
   <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="10" fill="#7E776D" text-anchor="middle">
-    <text x="140" y="214">a signal, not a siren</text>
-    <text x="250" y="214">what is true?</text>
-    <text x="360" y="214">stop the bleeding</text>
-    <text x="540" y="214">prove it is clean</text>
-    <text x="668" y="214">no blame, just fixes</text>
+    <text x="92"  y="236">while it's quiet</text>
+    <text x="204" y="236">what is true?</text>
+    <text x="409" y="236">stop it, remove it, restore it</text>
+    <text x="620" y="236">no blame, real fixes</text>
   </g>
 
-  <text x="40" y="40" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13"
+  <text x="40" y="36" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13"
         fill="#F5F2ED" font-weight="600">The arc of a bad day</text>
-  <text x="680" y="40" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace"
+  <text x="40" y="52" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5"
+        fill="#7E776D" letter-spacing="1">NIST SP 800-61 LIFE CYCLE</text>
+  <text x="680" y="36" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace"
         font-size="11" fill="#E2600F">rehearsed &gt; improvised</text>
 </svg>
