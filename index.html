@@ -101,6 +101,7 @@
     <ul class="stats" aria-label="Career highlights">
       <li><b>0&nbsp;→&nbsp;1</b><span>Built the first formal security program at a company that had none</span></li>
       <li><b>~50%</b><span>PCI audit scope removed — the cheapest control is the system you no longer have</span></li>
+      <li><b>13×</b><span>More frequent identity revalidation after cutting MFA session trust from 90 days to 7</span></li>
       <li><b>20+&nbsp;yrs</b><span>Building and running the systems before I was asked to secure them</span></li>
     </ul>
   </div>
@@ -231,6 +232,11 @@
           a mid-sized company's risk profile than any appliance — and they do it without asking
           employees to become security experts.
         </p>
+        <p>
+          Concretely, that meant taking the minimum password length from 8 characters to 15 and
+          cutting MFA session trust from 90 days to 7 — roughly thirteen times more revalidation,
+          and a change almost nobody noticed except an attacker holding a stolen session.
+        </p>
         <p class="card__tag">Zero Trust · Identity · MFA/SSO · Cloud security</p>
       </article>
 
@@ -257,7 +263,8 @@
       <p class="sec-sub">
         You learn this the first time it happens to you, and every incident since has re-taught it:
         calm on the bad day is manufactured in advance, out of rehearsal, clear roles, and permission
-        to speak up early.
+        to speak up early. So we rehearse it — most recently in a facilitated tabletop that put the
+        plan under real pressure and handed back a short, unflattering list of things to fix.
       </p>
     </div>
     <figure class="figure-wide">
@@ -308,13 +315,18 @@
         <p>
           Established and lead the enterprise Information Security function with full accountability
           for strategy, governance, risk, and incident response across corporate, cloud, and
-          application environments. Senior-most authority on cyber risk, reporting posture and
-          recommendations directly to executive leadership.
+          application environments — as the organization's sole dedicated security resource. Senior-most
+          authority on cyber risk, reporting posture and recommendations directly to executive leadership.
         </p>
         <ul>
-          <li><b>Program strategy:</b> built the organization's first formal cybersecurity program — governance, operating model, and a multi-year strategy aligned to NIST CSF.</li>
+          <li><b>Program strategy:</b> built the organization's first formal cybersecurity program — governance, operating model, and a multi-year strategy aligned to NIST CSF 2.0.</li>
           <li><b>Executive advisory:</b> advise leadership on risk acceptance, prioritization, and where the security dollar actually goes.</li>
           <li><b>Compliance optimization:</b> led PCI DSS governance and auditor engagement, cutting scope ~50% and reducing audit burden and long-term cost.</li>
+          <li><b>Identity hardening:</b> raised the enterprise minimum password length from 8 to 15 characters and cut MFA session trust from 90 days to 7, increasing identity revalidation roughly thirteenfold.</li>
+          <li><b>Distributed ownership:</b> launched a cross-functional Security Task Force with liaisons on every IT team, turning vulnerability remediation from centralized chasing into owned accountability.</li>
+          <li><b>Audit leadership:</b> led the annual PCI DSS compliance effort and coordinated a finance-sponsored IT audit, working directly with external auditors on control evidence.</li>
+          <li><b>Detection maturity:</b> expanded SIEM visibility with network telemetry feeding 24/7 monitoring, and ran a facilitated tabletop to pressure-test incident response.</li>
+          <li><b>Emerging tech governance:</b> formalized a structured software approval process and shaped early policy guidance for AI adoption.</li>
           <li><b>Risk integration:</b> stood up a formal third-party/SaaS risk program, embedding security review into procurement.</li>
           <li><b>Strategic planning:</b> authored the “Resilience Blueprint” multi-year roadmap aligning progress, constraints, and resourcing to business priorities.</li>
         </ul>
@@ -369,6 +381,11 @@
         So I run awareness like storytelling, not compliance homework: short, specific, human, and
         occasionally funny. I'd rather someone remember one story about a fake invoice than pass a
         quiz they'll forget by Thursday.
+      </p>
+      <p>
+        Last year that meant five sessions — HR, Finance, IT, the steering committee, and the whole
+        company — and several of them were requested by business leaders rather than scheduled by me.
+        That is the only attendance metric I actually trust.
       </p>
       <p>
         And none of it stays at work. The person who learns to spot a fake invoice on Tuesday is the
