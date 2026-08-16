@@ -34,7 +34,7 @@
     <text x="320" y="212" text-anchor="middle" fill="#E2600F">“I think I clicked something.”</text>
   </g>
   <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" fill="#F5F2ED">
-    <text x="320" y="248" text-anchor="middle">The most valuable sentence in security — and people only say it</text>
+    <text x="320" y="248" text-anchor="middle">The most valuable sentence in security, and people only say it</text>
     <text x="320" y="268" text-anchor="middle" fill="#B4ADA2">when they are certain they will not be punished for it.</text>
   </g>
 </svg>

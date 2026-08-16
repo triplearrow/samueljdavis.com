@@ -1,5 +1,5 @@
 /* ============================================================
-   terminal.js — the conversational terminal on samueljdavis.com
+   terminal.js - the conversational terminal on samueljdavis.com
    No dependencies. Everything below is hand-written content.
    ============================================================ */
 (function () {
@@ -87,7 +87,7 @@
           HEAD('SAMUEL J. DAVIS, CISSP'),
           RULE(),
           L('Director of Information Security / Head of Cybersecurity'),
-          L('Highlights for Children, Inc. — Columbus, Ohio'),
+          L('Highlights for Children, Inc. · Columbus, Ohio'),
           SP(),
           L('I build enterprise security programs where none existed, and I explain'),
           L('them in language that gets a decision instead of a blank stare.'),
@@ -111,7 +111,7 @@
           HEAD('THE LONGER STORY'),
           RULE(),
           L('I did not start in security. I started by building the things security'),
-          L('people later told me to fix — applications, architectures, websites,'),
+          L('people later told me to fix: applications, architectures, websites,'),
           L('networks. That order matters. It is why my requirements tend to be'),
           L('implementable, and why engineers usually stop bracing when I show up.'),
           SP(),
@@ -122,7 +122,7 @@
           SP(),
           L('What I found interesting was not the technology. It was the translation.'),
           L('Almost every serious problem I have watched unfold was preceded by'),
-          L('someone who understood the risk and someone who made the decision —'),
+          L('someone who understood the risk and someone who made the decision,'),
           L('and they were not the same person, and they were not speaking the'),
           L('same language.'),
           SP(),
@@ -140,19 +140,19 @@
         return [
           HEAD('EXPERIENCE'),
           RULE(),
-          A('Apr 2023 — Present · Director of Information Security / Head of Cybersecurity'),
-          D('Highlights for Children, Inc. — Columbus, OH'),
+          A('Apr 2023 – Present · Director of Information Security / Head of Cybersecurity'),
+          D('Highlights for Children, Inc. · Columbus, OH'),
           L('  · Established the enterprise Information Security function end to end:'),
           L('    strategy, governance, risk management, incident response.'),
           L('  · Senior-most authority on cyber risk; report posture and'),
           L('    recommendations directly to executive leadership.'),
-          L('  · Led PCI DSS governance and auditor engagement — scope down ~50%.'),
+          L('  · Led PCI DSS governance and auditor engagement. Scope down ~50%.'),
           L('  · Stood up third-party/SaaS risk assessment: 20+ vendors a year,'),
           L('    embedded into procurement decisions.'),
           L('  · Authored the multi-year "Resilience Blueprint" roadmap.'),
           SP(),
-          A('Jun 2017 — Apr 2023 · Senior Manager, Network Services'),
-          D('Highlights for Children, Inc. — Columbus, OH'),
+          A('Jun 2017 – Apr 2023 · Senior Manager, Network Services'),
+          D('Highlights for Children, Inc. · Columbus, OH'),
           L('  · Led network, cloud (Azure), and web operations teams for'),
           L('    customer-facing and internal platforms.'),
           L('  · Owned uptime, resilience, and operational health.'),
@@ -216,7 +216,7 @@
           SP(),
           A('3. Trust is checked per request, not granted per badge.'),
           L('   Identity is the perimeter. MFA, SSO, and privileged access management'),
-          L('   move a mid-sized company\'s risk further than any appliance — and'),
+          L('   move a mid-sized company\'s risk further than any appliance, and'),
           L('   they do not require employees to become security experts.'),
           SP(),
           A('4. The vendor is part of your attack surface.'),
@@ -251,7 +251,7 @@
           A('  ~50%'),
           L('    PCI DSS scope reduction over three years, led through'),
           L('    auditor engagement. Less to audit, less to patch, less'),
-          L('    to explain — permanently.'),
+          L('    to explain. Permanently.'),
           SP(),
           A('  20+ / year'),
           L('    Third-party and SaaS security assessments, with the review'),
@@ -260,7 +260,7 @@
           SP(),
           A('  Board level'),
           L('    Cyber risk posture, roadmap, and investment recommendations'),
-          L('    delivered directly to executive leadership — and understood.'),
+          L('    delivered directly to executive leadership, and understood.'),
           SP(),
           D('Numbers I like less but track anyway: how fast people report a'),
           D('mistake, and whether they still do it after the third time.'),
@@ -312,7 +312,7 @@
           L('  REVIEW   →  blameless, and it produces fixes with owners and dates.'),
           SP(),
           L('Three things I insist on, settled while it is quiet:'),
-          L('  1. Roles before rules — who decides, who talks, who touches the'),
+          L('  1. Roles before rules. Who decides, who talks, who touches the'),
           L('     keyboard. Ambiguity is the real outage.'),
           L('  2. Communicate up early. Executives forgive bad news. They do not'),
           L('     forgive late news.'),
@@ -340,7 +340,7 @@
           L('  for tabletop exercises, and it is why mine are not optional.'),
           SP(),
           L('  Someone has to own the decision. In a real incident the worst'),
-          L('  outcome is not a wrong call — it is four capable people waiting'),
+          L('  outcome is not a wrong call. It is four capable people waiting'),
           L('  politely for someone else to make one.'),
           SP(),
           D('Also: I have written the incident report at 3 a.m. in both careers.'),
@@ -359,12 +359,12 @@
           HEAD('EDUCATION'),
           RULE(),
           L('B.S., Computer Information Systems'),
-          D('DeVry University — Columbus, OH'),
+          D('DeVry University · Columbus, OH'),
           SP(),
           HEAD('CERTIFICATION'),
           RULE(),
-          L('CISSP — Certified Information Systems Security Professional'),
-          D('(ISC)², 2019 — earned on my own initiative, mid-career, at night.'),
+          L('CISSP: Certified Information Systems Security Professional'),
+          D('(ISC)², 2019. Earned on my own initiative, mid-career, at night.'),
           RAW('<span class="t-dim">Verify: </span><a class="t-link" href="https://www.credly.com/badges/480a0618-11e8-4d96-857b-8e042e246642" target="_blank" rel="noopener">credly.com/badges/480a0618 ↗</a>'),
           SP(),
           RUNS(['skills', 'hire'])
@@ -382,7 +382,7 @@
           L('I like rooms where nobody works in security. Executives, editors,'),
           L('warehouse teams, parents, boards. Topics I can do without slides:'),
           SP(),
-          L('  · "What actually happens during a breach" — the unglamorous version'),
+          L('  · "What actually happens during a breach," the unglamorous version'),
           L('  · Explaining cyber risk to a board without the fear-o-meter'),
           L('  · Why your vendors are your attack surface'),
           L('  · Building a security program when the budget is a rounding error'),
@@ -406,7 +406,7 @@
           RULE(),
           A('What I am:'),
           L('  A hands-on security executive who has built a program from zero'),
-          L('  inside a real company with real constraints — not a consultant'),
+          L('  inside a real company with real constraints, not a consultant'),
           L('  who left before the hard part.'),
           SP(),
           A('Titles that fit:'),
@@ -458,8 +458,8 @@
         return [
           HEAD('LINKS'),
           RULE(),
-          RAW('<span class="t-dim">→ </span><a class="t-link" href="https://linkedin.com/in/samueljdavis/" target="_blank" rel="noopener">LinkedIn — /in/samueljdavis ↗</a>'),
-          RAW('<span class="t-dim">→ </span><a class="t-link" href="https://www.credly.com/badges/480a0618-11e8-4d96-857b-8e042e246642" target="_blank" rel="noopener">Credly — CISSP verification ↗</a>'),
+          RAW('<span class="t-dim">→ </span><a class="t-link" href="https://linkedin.com/in/samueljdavis/" target="_blank" rel="noopener">LinkedIn · /in/samueljdavis ↗</a>'),
+          RAW('<span class="t-dim">→ </span><a class="t-link" href="https://www.credly.com/badges/480a0618-11e8-4d96-857b-8e042e246642" target="_blank" rel="noopener">Credly · CISSP verification ↗</a>'),
           RAW('<span class="t-dim">→ </span><a class="t-link" href="assets/Samuel-J-Davis-Resume.pdf" download>Résumé (PDF) ↓</a>'),
           SP(),
           D('No, there is no crypto newsletter.'),
@@ -480,7 +480,7 @@
         }, 700);
         return [
           D('fetching Samuel-J-Davis-Resume.pdf ...'),
-          A('✓ download started — check your downloads folder.'),
+          A('✓ download started. Check your downloads folder.'),
           RAW('<span class="t-dim">If your browser blocked it: </span><a class="t-link" href="assets/Samuel-J-Davis-Resume.pdf" download>click here ↓</a>'),
           SP()
         ];
@@ -519,7 +519,7 @@
       }
     },
     coffee: { hidden: true, run: function () { return [L('☕ Black. Early. Non-negotiable.'), D('Error 418: I am a security director, not a teapot.'), SP()]; } },
-    whoareyou: { hidden: true, alias: ['hello', 'hi', 'hey', 'yo'], run: function () { return [L('Hi — Sam Davis. Ask me anything, or type ' + 'help' + ' for the menu.'), RUNS(['whoami', 'hire']), SP()]; } },
+    whoareyou: { hidden: true, alias: ['hello', 'hi', 'hey', 'yo'], run: function () { return [L('Hi, Sam Davis. Ask me anything, or type ' + 'help' + ' for the menu.'), RUNS(['whoami', 'hire']), SP()]; } },
     date: { hidden: true, run: function () { return [D(new Date().toString()), SP()]; } },
     exit: { hidden: true, alias: ['quit', 'logout'], run: function () { return [D('There is no exit. There is only the contact form.'), RUNS(['contact']), SP()]; } },
     rm: { hidden: true, run: function () { return [L('Nice try.'), D('Backups are tested quarterly. Ask me about the restore drill.'), SP()]; } },
@@ -527,7 +527,7 @@
   };
 
   /* ============================================================
-     FREE-TEXT INTENTS — the "chat" half of the terminal
+     FREE-TEXT INTENTS: the "chat" half of the terminal
      ============================================================ */
   var INTENTS = [
     {
@@ -565,7 +565,7 @@
           L('  3. Delete scope. Retire, segment, consolidate. Costs nothing to'),
           L('     defend a system you no longer run.'),
           L('  4. Prove your backups. Untested backups are a rumor.'),
-          L('  5. Then buy tools — and only ones somebody has time to watch.'),
+          L('  5. Then buy tools, and only ones somebody has time to watch.'),
           SP(),
           A('A tool with no owner is just a subscription with a dashboard.'),
           SP()
@@ -583,7 +583,7 @@
           SP(),
           L('  · Lead with the business consequence, not the vulnerability.'),
           L('  · One page, three options, a recommendation, and a cost.'),
-          L('  · Say what happens if we do nothing — plainly, without theater.'),
+          L('  · Say what happens if we do nothing, plainly, without theater.'),
           L('  · Never use fear as leverage. It works once and costs you'),
           L('    credibility for the rest of your tenure.'),
           SP(),
@@ -630,7 +630,7 @@
           L('The bigger near-term risk is not sentient malware. It is data:'),
           L('employees pasting confidential material into tools nobody assessed,'),
           L('and vendors quietly turning on a model that trains on your content.'),
-          L('That is a third-party risk problem wearing a new hat — and I already'),
+          L('That is a third-party risk problem wearing a new hat, and I already'),
           L('have a process for that.'),
           SP(),
           D('Also, phishing got grammatically correct. Tell your users the old'),
@@ -651,7 +651,7 @@
           L('  urgency  ·  authority  ·  secrecy'),
           SP(),
           L('"Right now", "this is the CFO", "do not discuss this with anyone."'),
-          L('If a message has all three, it is a scam until proven otherwise —'),
+          L('If a message has all three, it is a scam until proven otherwise,'),
           L('and the proof is a phone call to a number you already had.'),
           SP(),
           L('And build the reporting button into the place people already are.'),
@@ -667,7 +667,7 @@
           HEAD('FOR NORMAL HUMANS (NOT COMPANIES)'),
           RULE(),
           L('  1. A password manager. One good password protecting the rest.'),
-          L('  2. MFA on email first — it is the skeleton key to everything else.'),
+          L('  2. MFA on email first. It is the skeleton key to everything else.'),
           L('  3. Freeze your credit. It is free and takes about ten minutes.'),
           L('  4. Update your phone. Most attacks are old bugs, not new ones.'),
           L('  5. Agree on a family code word for "is this really you?" calls.'),
@@ -686,7 +686,7 @@
           RULE(),
           L('Sideways, and later than most.'),
           SP(),
-          L('I spent years building — code, architecture, websites, networks. Then'),
+          L('I spent years building: code, architecture, websites, networks. Then'),
           L('I ran operations, which is where you learn that reliability and'),
           L('security are the same conversation held by different departments.'),
           SP(),
@@ -721,7 +721,7 @@
       k: ['salary', 'compensation', 'rate', 'how much', 'pay'],
       out: function () {
         return [
-          L('Happy to talk numbers — just not before I understand the scope.'),
+          L('Happy to talk numbers, just not before I understand the scope.'),
           SP(),
           L('Tell me the size of the environment, what the security function looks'),
           L('like today, who I would report to, and what the first year has to'),
@@ -762,7 +762,7 @@
           L('  leadership believe is true? (Some of it will not be.)'),
           SP(),
           L('  Days 31–60 · Baseline against a framework and write it down'),
-          L('  honestly. Fix the free things immediately — MFA gaps, orphaned'),
+          L('  honestly. Fix the free things immediately: MFA gaps, orphaned'),
           L('  admin accounts, backups nobody has restored.'),
           SP(),
           L('  Days 61–90 · Bring leadership one page: where we are, the three'),
@@ -793,8 +793,8 @@
           L('was cutting scope by about half over three years, so that passing'),
           L('got permanently cheaper and the environment got permanently smaller.'),
           SP(),
-          L('Treat your auditor like an engineer, not an adversary. Show your'),
-          L('working. The relationship is worth more than the certificate.'),
+          L('Your auditor is a partner, working the same problem you are. Show'),
+          L('your work. The relationship is worth more than the certificate.'),
           SP()
         ];
       }
@@ -824,7 +824,7 @@
           L('for anybody.'),
           SP(),
           L('Every request gets evaluated on identity, device health, privilege,'),
-          L('context, and the sensitivity of what is being reached — and the'),
+          L('context, and the sensitivity of what is being reached, and the'),
           L('answer is re-checked rather than remembered.'),
           SP(),
           L('For most mid-sized companies the practical version is: strong'),
@@ -840,7 +840,7 @@
         return [
           L('We built on the NIST Cybersecurity Framework.'),
           SP(),
-          L('Not because it is magic — because it gives an organization with no'),
+          L('Not because it is magic. Because it gives an organization with no'),
           L('security history a shared vocabulary and an honest scorecard. Govern,'),
           L('Identify, Protect, Detect, Respond, Recover. It maps cleanly to how'),
           L('a business already thinks about accountability.'),
@@ -854,14 +854,14 @@
     },
     {
       k: ['thank', 'thanks', 'appreciate', 'nice site', 'cool site', 'great site', 'love this'],
-      out: function () { return [A('Thank you — genuinely. Built by hand, which is either charming or a red flag.'), RUNS(['contact']), SP()]; }
+      out: function () { return [A('Thank you, genuinely. Built by hand, which is either charming or a red flag.'), RUNS(['contact']), SP()]; }
     },
     {
       k: ['are you a bot', 'is this real', 'chatgpt wrote', 'ai wrote', 'are you human'],
       out: function () {
         return [
-          L('Fair question. This terminal is hand-written, not a language model —'),
-          L('every answer here is something I actually wrote and would say out loud.'),
+          L('Fair question. This terminal is hand-written, not a language model.'),
+          L('Every answer here is something I actually wrote and would say out loud.'),
           SP(),
           L('If you want the unscripted version, that is what the email is for.'),
           SP(),
@@ -968,7 +968,7 @@
 
   function unknown(raw) {
     return [
-      L('Not a command I know — but I probably have an opinion anyway.'),
+      L('Not a command I know, but I probably have an opinion anyway.'),
       SP(),
       D('Try asking it as a question ("how do you talk to a board?"), or pick one:'),
       RUNS(['help', 'whoami', 'hire', 'approach', 'contact']),
@@ -1094,7 +1094,7 @@
      ============================================================ */
   async function boot() {
     var steps = [
-      D('samueljdavis.com — session opened ' + new Date().toLocaleDateString()),
+      D('samueljdavis.com · session opened ' + new Date().toLocaleDateString()),
       D('authenticating guest ......................... ok'),
       D('loading career history ....................... ok'),
       D('loading opinions (strongly held) ............. ok'),
@@ -1105,7 +1105,7 @@
     await emit(banner(), 0);
     await emit([
       SP(),
-      L('Hi — I\'m Sam. Director of Information Security, CISSP, and a')  ,
+      L('Hi, I\'m Sam. Director of Information Security, CISSP, and a')  ,
       L('recovering builder who now spends his days translating risk.'),
       SP(),
       RAW('Type <span class="t-key">help</span> for the menu, or just ask me a question the way you would in person.'),

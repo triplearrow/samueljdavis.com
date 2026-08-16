@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t4 d4" width="400" height="400">
   <title id="t4">NIST Cybersecurity Framework wheel</title>
-  <desc id="d4">Five operating functions — Identify, Protect, Detect, Respond, Recover — arranged around a Govern core.</desc>
+  <desc id="d4">Five operating functions (Identify, Protect, Detect, Respond, Recover) arranged around a Govern core.</desc>
 
   <g transform="translate(200 200)">
     <!-- five segments of an annulus, r 78 -> 150 -->

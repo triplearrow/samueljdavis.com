@@ -1,5 +1,5 @@
 /* ============================================================
-   site.js — small progressive enhancements. The page works without it.
+   site.js - small progressive enhancements. The page works without it.
    ============================================================ */
 (function () {
   'use strict';
