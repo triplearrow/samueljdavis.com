@@ -781,6 +781,10 @@
         return [
           HEAD('ON COMPLIANCE'),
           RULE(),
+          L('Good security practice is the goal. Compliance is the outcome.'),
+          L('Run it backwards — chase the checklist and hope security follows —'),
+          L('and you get a binder that passes and an environment that does not.'),
+          SP(),
           L('Compliance is a floor, not a ceiling — but it is a floor that comes'),
           L('with budget attached, and a smart security leader uses it.'),
           SP(),
