@@ -181,6 +181,7 @@
           L('Risk assessment & reporting · Security governance · Policy development'),
           L('Regulatory compliance · Incident response management · Vendor risk'),
           L('Security roadmapping · Business continuity planning'),
+          L('Agile & Waterfall delivery · Executive risk and tradeoff briefing'),
           SP(),
           HEAD('TECHNICAL'),
           RULE(),
@@ -366,6 +367,15 @@
           L('CISSP: Certified Information Systems Security Professional'),
           D('(ISC)², 2019. Earned on my own initiative, mid-career, at night.'),
           RAW('<span class="t-dim">Verify: </span><a class="t-link" href="https://www.credly.com/badges/480a0618-11e8-4d96-857b-8e042e246642" target="_blank" rel="noopener">credly.com/badges/480a0618 ↗</a>'),
+          SP(),
+          HEAD('MEMBERSHIPS'),
+          RULE(),
+          L('(ISC)² Central Ohio Chapter · Security MBA'),
+          D('Sep 2019 – Present'),
+          L('Central Ohio ISSA · Member'),
+          D('Jun 2015 – Present'),
+          L('InfraGard · Member'),
+          D('2015 – 2024'),
           SP(),
           RUNS(['skills', 'hire'])
         ];
