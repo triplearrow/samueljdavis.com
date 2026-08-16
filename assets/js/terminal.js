@@ -223,7 +223,12 @@
           L('   Security review sits in front of procurement, not behind it. "Not'),
           L('   like that" is free before signature and expensive after.'),
           SP(),
-          A('5. Say the number.'),
+          A('5. If you do not know you have it, you cannot protect it.'),
+          L('   Every framework opens with an inventory and almost every one of'),
+          L('   them has stopped being true. Knowing what you own is a control,'),
+          L('   not the paperwork you do before the real controls.'),
+          SP(),
+          A('6. Say the number.'),
           L('   Risk without a likelihood, an impact, and a date is just a mood.'),
           SP(),
           RUNS(['wins', 'culture', 'ir'])

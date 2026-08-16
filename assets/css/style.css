@@ -156,15 +156,6 @@ p{ margin:0 0 1.1em; }
   border-radius:14px; box-shadow:0 24px 50px -24px rgba(26,25,23,.55);
 }
 
-/* ---------- stats ---------- */
-.stats{
-  list-style:none; margin:clamp(40px,6vw,72px) 0 0; padding:26px 0 0;
-  border-top:1px solid var(--line);
-  display:grid; grid-template-columns:repeat(4,1fr); gap:28px;
-}
-.stats li{ display:flex; flex-direction:column; gap:6px; }
-.stats b{ font:700 clamp(1.7rem,3vw,2.2rem)/1 var(--sans); color:var(--black); letter-spacing:-.03em; }
-.stats span{ font-size:13.5px; line-height:1.45; color:var(--grey); max-width:26ch; }
 
 /* ---------- bands ---------- */
 .band{ padding:clamp(64px,9vw,116px) 0; }
@@ -194,6 +185,8 @@ p{ margin:0 0 1.1em; }
 
 /* ---------- cards ---------- */
 .cards{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:26px; }
+/* a statement card that runs the full width instead of sitting orphaned in the last row */
+.card--wide{ grid-column:1 / -1; }
 .card{
   background:var(--paper); border:1px solid var(--line); border-radius:var(--r);
   padding:26px 26px 24px; box-shadow:var(--shadow);
@@ -391,7 +384,6 @@ a.clink:hover{ border-color:var(--orange); background:var(--orange-wash); transf
   .hero__grid{ grid-template-columns:1fr; gap:40px; }
   .hero__art{ min-height:0; max-width:520px; margin-inline:auto; width:100%; }
   .hero__plate{ width:150px; right:0; bottom:0; }
-  .stats{ grid-template-columns:repeat(2,1fr); gap:24px 28px; }
   .cards{ grid-template-columns:1fr; }
   .contact{ grid-template-columns:1fr; gap:34px; }
   .split{ grid-template-columns:1fr; gap:36px; }

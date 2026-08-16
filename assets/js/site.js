@@ -40,7 +40,7 @@
 
   /* ---------- reveal on scroll ---------- */
   var targets = document.querySelectorAll(
-    '.sec-head, .card, .stats, .split__copy, .split__fig, .timeline > li, .figure-wide, .ticks, .creds__col, .contact__copy'
+    '.sec-head, .card, .split__copy, .split__fig, .timeline > li, .figure-wide, .ticks, .creds__col, .contact__copy'
   );
 
   function showAll() {
