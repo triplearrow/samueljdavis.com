@@ -95,14 +95,27 @@ monogram plate for networking — the plate is there so the page never looks unf
 
 ## Contact details
 
-Email and phone are **assembled in JavaScript at runtime** rather than sitting in
-the HTML, which stops the majority of address-harvesting bots. The page still
-works without JS; the email link just reads "click to reveal" until scripts run.
+The email address lives in exactly one place — `assets/js/contact.js` — stored
+XOR-masked and base64'd, so no readable copy of it appears in any served file.
+It is decoded only when something asks for it, and nothing asks until a visitor
+acts: the contact link stays inert until it is clicked, so a headless crawler
+that renders the page and scrapes the DOM comes away with nothing.
 
 - Email and LinkedIn appear on the page and in the terminal's `contact` command.
-- **The phone number appears only in the terminal's `contact` command.** If you'd
-  rather it not be on a public page at all, delete the `TEL` array and the `phone`
-  line in `assets/js/terminal.js`.
+- **No phone number is published anywhere on the site.**
+- This raises the cost of harvesting; it is not a wall. Anyone executing the
+  page's JavaScript can call `SJDContact.mail()`. That is the ceiling on a
+  static host — the only way to keep the address off the site entirely is a
+  form service (Formspree, Web3Forms) that holds it on their side.
+
+To change the address, re-run the mask rather than pasting plaintext:
+
+```powershell
+$K = 0x5b; $s = "you@example.com"
+$b = New-Object byte[] $s.Length
+for ($i=0; $i -lt $s.Length; $i++) { $b[$i] = ([byte][char]$s[$i]) -bxor ($K + ($i % 7)) }
+[Convert]::ToBase64String($b)
+```
 
 ---
 

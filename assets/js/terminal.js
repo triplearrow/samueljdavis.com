@@ -14,11 +14,10 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- contact details, lightly obfuscated against scrapers ---------- */
-  var MAIL = ['silverramtruck', 'gmail', 'com'];
-  var TEL  = ['614', '561', '8517'];
-  function mail() { return MAIL[0] + '@' + MAIL[1] + '.' + MAIL[2]; }
-  function tel()  { return TEL[0] + '-' + TEL[1] + '-' + TEL[2]; }
+  /* ---------- contact details ----------
+     Masked and kept in contact.js; decoded here only when someone runs the
+     `contact` command, which is always a deliberate keystroke or click. */
+  function mail() { return window.SJDContact ? window.SJDContact.mail() : ''; }
 
   /* ---------- tiny output DSL ---------- */
   function L(text, cls) { return { text: text, cls: cls || 't-out' }; }
@@ -67,7 +66,7 @@
           L('  education     degree + certifications'),
           L('  speaking      talks, workshops, storytelling'),
           L('  hire          for recruiters and hiring managers'),
-          L('  contact       email, LinkedIn, phone'),
+          L('  contact       email and LinkedIn'),
           L('  resume        download the PDF'),
           L('  links         everywhere else I exist'),
           SP(),
@@ -415,7 +414,7 @@
           L('  Bonus points if leadership is willing to hear the real number.'),
           SP(),
           A('Location:'),
-          L('  Pataskala, Ohio (Columbus metro). Open to remote and hybrid;'),
+          L('  Columbus, Ohio. Open to remote and hybrid;'),
           L('  happy to travel for the parts that need a room.'),
           SP(),
           A('The fastest path:'),
@@ -435,10 +434,9 @@
           HEAD('CONTACT'),
           RULE(),
           RAW('<span class="t-dim">email     </span><a class="t-link" href="mailto:' + mail() + '">' + mail() + '</a>'),
-          RAW('<span class="t-dim">phone     </span><a class="t-link" href="tel:+1' + TEL.join('') + '">' + tel() + '</a>'),
           RAW('<span class="t-dim">linkedin  </span><a class="t-link" href="https://linkedin.com/in/samueljdavis/" target="_blank" rel="noopener">linkedin.com/in/samueljdavis ↗</a>'),
           RAW('<span class="t-dim">resume    </span><a class="t-link" href="assets/Samuel-J-Davis-Resume.pdf" download>Samuel-J-Davis-Resume.pdf ↓</a>'),
-          RAW('<span class="t-dim">based in  </span><span class="t-key">Pataskala, Ohio — Columbus metro</span>'),
+          RAW('<span class="t-dim">based in  </span><span class="t-key">Columbus, Ohio</span>'),
           SP(),
           D('Real inbox, real human, usually within a day. If it is urgent and'),
           D('security-related, say so in the subject line and I will move it up.'),
@@ -704,7 +702,7 @@
       k: ['remote', 'relocate', 'onsite', 'hybrid', 'where do you live', 'located', 'location'],
       out: function () {
         return [
-          L('Based in Pataskala, Ohio — Columbus metro.'),
+          L('Based in Columbus, Ohio.'),
           SP(),
           L('Open to remote and hybrid roles, and happy to travel for the parts'),
           L('that genuinely need a room: tabletops, board sessions, and the first'),

@@ -75,14 +75,26 @@
      crawler, or printer never fires a scroll event, show everything anyway. */
   window.addEventListener('beforeprint', showAll);
 
-  /* ---------- email: assembled in the browser, not sitting in the HTML ---------- */
-  var parts = ['silverramtruck', 'gmail', 'com'];
-  var address = parts[0] + '@' + parts[1] + '.' + parts[2];
+  /* ---------- email: revealed on click, never on load ----------
+     Writing the mailto: into the DOM at load time hands the address to
+     every headless browser that renders the page. So the link stays inert
+     until a person activates it: the first click swaps in the real address,
+     and the link works as a normal mailto from then on. */
   Array.prototype.forEach.call(document.querySelectorAll('[data-mail]'), function (a) {
     var slot = a.querySelector('[data-mail-text]');
-    a.setAttribute('href', 'mailto:' + address);
-    a.removeAttribute('rel');
-    if (slot) slot.textContent = address;
+    var shown = false;
+
+    a.addEventListener('click', function (e) {
+      if (shown || !window.SJDContact) return;
+      e.preventDefault();
+      shown = true;
+
+      var address = window.SJDContact.mail();
+      a.setAttribute('href', 'mailto:' + address);
+      a.setAttribute('aria-label', 'Email ' + address);
+      a.removeAttribute('rel');
+      if (slot) slot.textContent = address;
+    });
   });
 
   /* ---------- deep link: #terminal?cmd=hire  or  /#hire ---------- */

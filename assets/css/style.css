@@ -225,6 +225,9 @@ p{ margin:0 0 1.1em; }
 .ticks{ list-style:none; margin:44px 0 0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:26px; }
 .ticks li{ padding-top:18px; border-top:2px solid var(--line-dark); font-size:15px; color:#A79F95; }
 .ticks b{ color:#F5F2ED; display:block; margin-bottom:4px; font-weight:600; }
+/* same list on a light band */
+.ticks--light li{ border-top-color:var(--line); color:var(--grey); }
+.ticks--light b{ color:var(--black); }
 
 /* ---------- timeline ---------- */
 .timeline{ list-style:none; margin:0; padding:0; counter-reset:t; }
