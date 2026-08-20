@@ -199,6 +199,8 @@ p{ margin:0 0 1.1em; }
   padding:16px; display:flex; align-items:center; justify-content:center; min-height:190px;
 }
 .card figure img{ max-height:190px; width:auto; }
+/* the wide statement card has far more room, so let its diagram scale */
+.card--wide figure img{ max-height:none; width:100%; max-width:700px; }
 .card p{ color:var(--grey); font-size:15.5px; margin-bottom:.9em; }
 .card__tag{
   margin:auto 0 0; padding-top:14px; border-top:1px solid var(--line);

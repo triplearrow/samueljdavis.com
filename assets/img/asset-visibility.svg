@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 330" role="img" aria-labelledby="t11 d11" width="620" height="330">
+  <title id="t11">Control coverage stops at the edge of the inventory</title>
+  <desc id="d11">Twelve recorded systems sit inside a shaded band where patching, monitoring and ownership apply. Four further systems sit outside the band, drawn as dashed outlines marked with question marks, because nothing wrote them down and no control reaches them.</desc>
+
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" letter-spacing="2">
+    <text x="8" y="26" fill="#9A938A">WHAT THE INVENTORY KNOWS</text>
+    <text x="612" y="26" text-anchor="end" fill="#E2600F">WHAT IT DOES NOT</text>
+  </g>
+
+  <!-- the band every control can actually reach -->
+  <rect x="8" y="44" width="400" height="200" rx="12" fill="#F2EFEA" stroke="#DCD6CD"/>
+
+  <!-- recorded systems -->
+  <g fill="#8C857B">
+    <rect x="113" y="75"  width="34" height="34" rx="5"/><rect x="165" y="75"  width="34" height="34" rx="5"/>
+    <rect x="217" y="75"  width="34" height="34" rx="5"/><rect x="269" y="75"  width="34" height="34" rx="5"/>
+    <rect x="113" y="127" width="34" height="34" rx="5"/><rect x="165" y="127" width="34" height="34" rx="5"/>
+    <rect x="217" y="127" width="34" height="34" rx="5"/><rect x="269" y="127" width="34" height="34" rx="5"/>
+    <rect x="113" y="179" width="34" height="34" rx="5"/><rect x="165" y="179" width="34" height="34" rx="5"/>
+    <rect x="217" y="179" width="34" height="34" rx="5"/><rect x="269" y="179" width="34" height="34" rx="5"/>
+  </g>
+
+  <!-- the edge of the inventory -->
+  <path d="M426 36V252" stroke="#E2600F" stroke-width="1.5" stroke-dasharray="6 5"/>
+
+  <!-- present, unmanaged, unreachable -->
+  <g fill="#FFF2E8" stroke="#E2600F" stroke-width="1.5" stroke-dasharray="5 4">
+    <rect x="485" y="101" width="34" height="34" rx="5"/><rect x="537" y="101" width="34" height="34" rx="5"/>
+    <rect x="485" y="153" width="34" height="34" rx="5"/><rect x="537" y="153" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="17" fill="#E2600F" text-anchor="middle">
+    <text x="502" y="124">?</text><text x="554" y="124">?</text>
+    <text x="502" y="176">?</text><text x="554" y="176">?</text>
+  </g>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13">
+    <text x="208" y="272" text-anchor="middle" fill="#6F685F">patched · monitored · owned · in the audit</text>
+    <text x="528" y="272" text-anchor="middle" fill="#E2600F">none of the above</text>
+  </g>
+
+  <text x="310" y="308" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="15" fill="#33302C">Every control you own stops at the edge of your inventory.</text>
+</svg>
