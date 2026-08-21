@@ -1,6 +1,6 @@
 # samueljdavis.com
 
-Personal site for **Samuel J. Davis, CISSP** — cybersecurity leadership, built for
+Personal site for **Samuel J. Davis, CISSP**. Cybersecurity leadership, built for
 professional networking and job hunting.
 
 Static HTML, CSS, and vanilla JavaScript. No build step, no framework, no
@@ -11,17 +11,17 @@ dependencies, no trackers. Open `index.html` and it works.
 ## The terminal
 
 The centrepiece is an interactive terminal (`assets/js/terminal.js`) that lets a
-visitor "chat" with Sam. It is **not** an AI — every response is hand-written
+visitor "chat" with Sam. It is **not** an AI. Every response is hand-written
 copy, so it never invents a fact about his career.
 
 It handles two kinds of input:
 
-**Commands** — `help`, `whoami`, `about`, `experience`, `skills`, `approach`,
+**Commands**: `help`, `whoami`, `about`, `experience`, `skills`, `approach`,
 `wins`, `culture`, `ir`, `military`, `education`, `speaking`, `hire`, `contact`,
 `resume`, `links`, `banner`, `clear`. Plus aliases (`story` → `about`,
 `recruiter` → `hire`, …) and a few easter eggs (`sudo`, `ls`, `coffee`, `rm`).
 
-**Plain-English questions** — a keyword-scoring matcher in the `INTENTS` array
+**Plain-English questions**: a keyword-scoring matcher in the `INTENTS` array
 answers things like *"what's your leadership style?"*, *"how do you talk to a
 board?"*, *"where would you start in the first 90 days?"*, *"are you open to
 remote?"*, *"what about AI?"*. If nothing scores high enough it falls back to a
@@ -59,7 +59,7 @@ kind of array. `alias: [...]` adds synonyms; `hidden: true` keeps it out of
 |---|---|
 | **Mode** | Light, with black and dark-grey bands for contrast |
 | **Colour** | White `#FFFFFF` / off-white `#F7F5F2` · black `#1A1917` · dark grey `#33302C` · orange `#E2600F` |
-| **Fonts** | System stacks only — no downloads, nothing to break: system sans for UI, Georgia for pull-quotes, the OS monospace for the terminal |
+| **Fonts** | System stacks only, no downloads, nothing to break: system sans for UI, Georgia for pull-quotes, the OS monospace for the terminal |
 
 Everything responds down to 320px. `prefers-reduced-motion` disables the
 typewriter, the boot sequence, and the scroll reveals.
@@ -68,13 +68,13 @@ typewriter, the boot sequence, and the scroll reveals.
 
 ## Images
 
-Ten hand-authored SVG diagrams in `assets/img/` — no stock photography. They are
+Ten hand-authored SVG diagrams in `assets/img/` , no stock photography. They are
 real explanations of Sam's work, not decoration:
 
 | File | What it shows |
 |---|---|
 | `hero-lattice.svg` | Layered controls, with an attack path stopped short of the core |
-| `monogram.svg` | Identity plate — initials, CISSP shield, service line |
+| `monogram.svg` | Identity plate: initials, CISSP shield, service line |
 | `translate.svg` | Security jargon → plain-English business decisions |
 | `nist-csf.svg` | NIST CSF functions around a Govern core |
 | `pci-scope.svg` | PCI scope cut roughly in half |
@@ -85,24 +85,37 @@ real explanations of Sam's work, not decoration:
 | `culture-mesh.svg` | One person reporting a mistake protects everyone connected |
 
 Plus `favicon.svg` and `og-card.png` (the 1200×630 preview used when the link is
-shared on LinkedIn — regenerate it from `og-card.svg` if the headline changes).
+shared on LinkedIn. Regenerate it from `og-card.svg` if the headline changes).
 
 **Want a real photo in the hero?** Drop it at `assets/img/portrait.jpg` and swap
 the `hero__plate` `<img>` in `index.html`. A good headshot will outperform the
-monogram plate for networking — the plate is there so the page never looks unfinished.
+monogram plate for networking. The plate is there so the page never looks unfinished.
 
 ---
 
 ## Contact details
 
-Email and phone are **assembled in JavaScript at runtime** rather than sitting in
-the HTML, which stops the majority of address-harvesting bots. The page still
-works without JS; the email link just reads "click to reveal" until scripts run.
+The email address lives in exactly one place, `assets/js/contact.js`, stored
+XOR-masked and base64'd, so no readable copy of it appears in any served file.
+It is decoded only when something asks for it, and nothing asks until a visitor
+acts: the contact link stays inert until it is clicked, so a headless crawler
+that renders the page and scrapes the DOM comes away with nothing.
 
 - Email and LinkedIn appear on the page and in the terminal's `contact` command.
-- **The phone number appears only in the terminal's `contact` command.** If you'd
-  rather it not be on a public page at all, delete the `TEL` array and the `phone`
-  line in `assets/js/terminal.js`.
+- **No phone number is published anywhere on the site.**
+- This raises the cost of harvesting; it is not a wall. Anyone executing the
+  page's JavaScript can call `SJDContact.mail()`. That is the ceiling on a
+  static host. The only way to keep the address off the site entirely is a
+  form service (Formspree, Web3Forms) that holds it on their side.
+
+To change the address, re-run the mask rather than pasting plaintext:
+
+```powershell
+$K = 0x5b; $s = "you@example.com"
+$b = New-Object byte[] $s.Length
+for ($i=0; $i -lt $s.Length; $i++) { $b[$i] = ([byte][char]$s[$i]) -bxor ($K + ($i % 7)) }
+[Convert]::ToBase64String($b)
+```
 
 ---
 
@@ -110,7 +123,7 @@ works without JS; the email link just reads "click to reveal" until scripts run.
 
 It is a static site, so anything that serves files will do.
 
-**GitHub Pages** — Settings → Pages → deploy from branch, root. `CNAME` already
+**GitHub Pages**: Settings → Pages → deploy from branch, root. `CNAME` already
 points at `www.samueljdavis.com`; add these DNS records at your registrar:
 
 ```
@@ -121,7 +134,7 @@ ALIAS   @      <username>.github.io      (or four A records to GitHub's IPs)
 Then tick **Enforce HTTPS**. `.nojekyll` stops Pages from processing the site
 through Jekyll.
 
-**Netlify / Cloudflare Pages / S3** — no build command, publish directory `/`.
+**Netlify / Cloudflare Pages / S3**: no build command, publish directory `/`.
 Delete `CNAME` if you're not using GitHub Pages.
 
 ### Local preview
@@ -135,5 +148,5 @@ python3 -m http.server 8000
 
 ## Updating the résumé
 
-Replace `assets/Samuel-J-Davis-Resume.pdf`, keeping the filename — the hero
+Replace `assets/Samuel-J-Davis-Resume.pdf`, keeping the filename. The hero
 button, the contact card, and the terminal's `resume` command all point at it.
