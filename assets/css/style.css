@@ -223,6 +223,46 @@ p{ margin:0 0 1.1em; }
 /* same list on a light band */
 .ticks--light li{ border-top-color:var(--line); color:var(--grey); }
 .ticks--light b{ color:var(--black); }
+/* ---------- decision simulator ---------- */
+.decide{ max-width:900px; margin-inline:auto; }
+.decide__fallback{ color:#A79F95; text-align:center; margin:0; }
+
+.decide__head{ display:flex; flex-wrap:wrap; align-items:baseline; gap:14px; margin-bottom:12px; }
+.decide__count{ font:600 11px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--orange); }
+.decide__tag{ font:500 12px/1 var(--mono); color:#A79F95; }
+
+.decide__title{ color:#F5F2ED; font-size:1.5rem; margin:0 0 .6em; }
+.decide__title:focus-visible{ outline:2px solid var(--orange); outline-offset:6px; }
+.decide__brief p{ color:#A79F95; margin:0 0 .9em; }
+
+.decide__opts{ display:grid; gap:12px; margin-top:26px; }
+.decide__opt{
+  display:block; width:100%; text-align:left; cursor:pointer; font:inherit; color:inherit;
+  background:#242220; border:1px solid var(--line-dark); border-radius:10px; padding:16px 18px;
+  transition:border-color .15s ease, background .15s ease, transform .15s ease;
+}
+.decide__opt:hover:not(:disabled){ border-color:var(--orange); transform:translateY(-1px); }
+.decide__opt b{ display:block; color:#F5F2ED; font:600 16px/1.35 var(--sans); margin-bottom:4px; }
+.decide__opt span{ display:block; font:500 13px/1.5 var(--mono); color:#8F887E; }
+.decide__opt:disabled{ cursor:default; }
+.decide__opt.is-picked{ border-color:var(--orange); background:#2C2925; }
+.decide__opt.is-picked b{ color:var(--orange); }
+.decide__opt.is-muted{ opacity:.4; }
+
+.decide__out{ margin-top:26px; border-left:3px solid var(--orange); padding-left:20px; }
+.decide__out:empty{ display:none; }
+.decide__verdict{ font:600 11px/1 var(--mono); letter-spacing:.14em; text-transform:uppercase; color:var(--orange); margin:0 0 10px; }
+.decide__body{ color:#C9C2B8; margin:0; }
+.decide__close{ color:#F5F2ED; margin:1.1em 0 0; }
+
+.decide__nav{ margin-top:22px; }
+.decide__next{
+  font:600 15px/1 var(--sans); cursor:pointer; border:0; border-radius:99px; padding:13px 22px;
+  background:var(--orange); color:#fff;
+  transition:background .15s ease, transform .15s ease;
+}
+.decide__next:hover{ background:var(--orange-dk); transform:translateY(-1px); }
+
 
 /* ---------- timeline ---------- */
 .timeline{ list-style:none; margin:0; padding:0; counter-reset:t; }
